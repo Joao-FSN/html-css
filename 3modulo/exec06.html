@@ -26,13 +26,23 @@
         }
 
         #tabela2 > caption{
-            
+            font-size:1.5em;
+            font-weight:bold;
+            padding:10px;
+            background-color: lightgray;
+            border:solid 1px black;
         }
 
         #tabela2{
+            position:relative;
             border: solid 1px black;
             border-collapse: collapse;
 
+        }
+
+        #tabela2 thead >tr >th{
+            position: sticky;
+            top:-1px;
         }
 
         #tabela2 td,th{
@@ -42,9 +52,15 @@
             
         }
 
+
+
         #tabela2 thead{
             color: white;
             background: rgb(104, 103, 103);
+        }
+
+        #tabela2 tbody> tr:nth-child(2n){
+            background:lightgray;
         }
 
         #tabela2 tfoot, th{
@@ -88,14 +104,14 @@
         
 <thead>
     <tr>
-        <th>Posição</th>
-        <th>Unidade</th>
-        <th>federativa</th>
-        <th>População (2010)</th>
-        <th>População (2021)</th>
-        <th>Mudança</th>
-        <th>% da pop. total</th>
-        <th>País comparável (habitantes)</th>
+        <th scope="col">Posição</th>
+        <th scope="col">Unidade</th>
+        <th scope="col">federativa</th>
+        <th scope="col">População (2010)</th>
+        <th scope="col">População (2021)</th>
+        <th scope="col">Mudança</th>
+        <th scope="col">% da pop. total</th>
+        <th scope="col">País comparável (habitantes)</th>
     </tr>
 </thead>
 
@@ -406,8 +422,9 @@
     </tr>
 </tbody>
 <tfoot><tr>
-    <th>Tabela retirada do <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o">wikipedia</a></th>
-</tr></tfoot>
+    <th scope="row">Tabela retirada do <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o">wikipedia</a></th>
+        </tr>
+</tfoot>
     </table>
 </body>
 </html>
