@@ -25,18 +25,18 @@
             vertical-align: bottom;
         }
 
-        #celula{
+        #tabela2{
             border-collapse: collapse;
         }
 
-        #celula td{
+        #tabela2 td{
             border:solid 1px black;
             padding: 10px;
             width: 300px;
             text-align: center;
         }
 
-        #tabela2 > caption{
+        #tabela3 > caption{
             font-size:1.5em;
             font-weight:bold;
             padding:10px;
@@ -44,19 +44,19 @@
             border:solid 1px black;
         }
 
-        #tabela2{
+        #tabela3{
             position:relative;
             border: solid 1px black;
             border-collapse: collapse;
 
         }
 
-        #tabela2 thead >tr >th{
+        #tabela3 thead >tr >th{
             position: sticky;
             top:-1px;
         }
 
-        #tabela2 td,th{
+        #tabela3 td,th{
             width: 400px;
             border:solid 1px black;
             padding:10px;
@@ -65,22 +65,42 @@
 
 
 
-        #tabela2 thead{
+        #tabela3 thead{
             color: white;
             background: rgb(104, 103, 103);
         }
 
-        #tabela2 tbody> tr:nth-child(2n){
+        #tabela3 tbody> tr:nth-child(2n){
             background:lightgray;
         }
 
-        #tabela2 tfoot, th{
+        #tabela3 tfoot, th{
             color: white;
             background: rgb(104, 103, 103);
         }
 
-        #tabela2 .numero{
+        #tabela3 .numero{
             text-align: right;
+        }
+
+        #desafio1{
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        #desafio1 td{
+            border:solid 1px black;
+            text-align: center;
+        }
+
+        #desafio2{
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        #desafio2 td{
+            border:solid 1px black;
+            text-align: center;
         }
 
 
@@ -109,7 +129,7 @@
 
     <h1>Mesclagem de tabelas</h1>
 
-    <table id="celula">
+    <table id="tabela2">
         <tr>
             <td>A</td>
             <td colspan="2">B</td>
@@ -134,7 +154,7 @@
     
     <h1>Tabelas Grandes</h1>
 
-    <table id="tabela2">
+    <table id="tabela3">
 
         <caption>População das Unidades Federativas</caption>
         
@@ -461,6 +481,72 @@
     <th scope="row" colspan="8">Tabela retirada do <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o">wikipedia</a></th>
         </tr>
 </tfoot>
+    </table>
+
+    <br>
+
+    <table id="desafio1">
+        <caption>Desafio Tabela 1</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table id="desafio2">
+        <caption>Desafio Tabela 2</caption>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+
+        <tr>
+            <td>N</td>
+        </tr>
     </table>
 </body>
 </html>
