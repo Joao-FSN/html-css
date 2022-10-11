@@ -11,19 +11,21 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /*Tabela 1*/
+
         table#tabela1{
             width:400px;
             height: 400px;
             border-collapse: collapse;
             text-align: center;
-            
-        
         }
 
         #tabela1 td{
             border:solid 2px black;
             vertical-align: bottom;
         }
+
+        /*Tabela 2*/
 
         #tabela2{
             border-collapse: collapse;
@@ -35,6 +37,8 @@
             width: 300px;
             text-align: center;
         }
+
+        /*tabela 3*/
 
         #tabela3 > caption{
             font-size:1.5em;
@@ -63,9 +67,7 @@
             
         }
 
-
-
-        #tabela3 thead{
+        #tabela3 >thead{
             color: white;
             background: rgb(104, 103, 103);
         }
@@ -83,6 +85,8 @@
             text-align: right;
         }
 
+        /*desafio 1*/
+
         #desafio1{
             border-collapse: collapse;
             width: 300px;
@@ -93,6 +97,8 @@
             text-align: center;
         }
 
+        /*desafio 2*/
+
         #desafio2{
             border-collapse: collapse;
             width: 300px;
@@ -101,6 +107,23 @@
         #desafio2 td{
             border:solid 1px black;
             text-align: center;
+        }
+
+        /*filme*/
+
+        #filme{
+            border-collapse: collapse;
+
+
+        }
+
+        #filme td{
+            border: solid 1px black;
+        }
+
+        #filme th{
+            background-color: white;
+            color: black;
         }
 
 
@@ -523,11 +546,11 @@
     <table id="desafio2">
         <caption>Desafio Tabela 2</caption>
         <tr>
-            <td>A</td>
-            <td>B</td>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
         </tr>
         <tr>
-            <td>C</td>
+            <td rowspan="4">C</td>
             <td>D</td>
             <td>E</td>
             <td>F</td>
@@ -545,8 +568,66 @@
         </tr>
 
         <tr>
-            <td>N</td>
+            <td colspan="4">N</td>
         </tr>
+    </table>
+
+    <br>
+
+    <table id="filme">
+        <thead>
+            <tr>
+                <th>Grupo</th>
+                <th>Nomes</th>
+                <th colspan="3">Filmes</th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <th rowspan="3">Mulheres</th>
+                    <td>Ana Maria Santos</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+
+                <tr>
+                    <td>Claudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big hero</td>
+                </tr>
+
+                <tr>
+                    <th rowspan="3">Homens</th>
+                    <td>Bruno Mendonça</td>
+                    <td>Intocáveis</td>
+                    <td>Aminésia</td>
+                    <td>Gladiador</td>
+                </tr>
+
+                <tr>
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-e</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star wars 5</td>
+                    <td>Taxi drive</td>
+                    <td>Toy story</td>
+                </tr>
+            </tbody>
+        </thead>
     </table>
 </body>
 </html>
