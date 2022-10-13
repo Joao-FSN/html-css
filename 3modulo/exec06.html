@@ -85,6 +85,10 @@
             text-align: right;
         }
 
+        #container{
+            overflow-x: auto;
+        }
+
         /*desafio 1*/
 
         #desafio1{
@@ -111,10 +115,19 @@
 
         /*filme*/
 
+        caption{
+            font-size:1.3em;
+            font-weight: bold;
+            padding:10px;
+            border-top: solid 1px black;
+            border-left: solid 1px black;
+            border-right: solid 1px black;
+            
+
+        }
+
         #filme{
             border-collapse: collapse;
-
-
         }
 
         #filme td{
@@ -127,6 +140,15 @@
         }
 
 
+        .a1{
+            background-color: green;
+        }
+
+        .a2{
+            background-color: red;
+        }
+
+
         
     </style>
 </head>
@@ -135,6 +157,10 @@
     <h1>Minha primeira tabela</h1>
 
     <table id="tabela1">
+        <colgroup>
+            <col class="a1">
+            <col class="a2" span="2">
+        </colgroup>
         <tr>
             <td>a1</td>
             <td>a2</td>
@@ -177,334 +203,335 @@
     
     <h1>Tabelas Grandes</h1>
 
-    <table id="tabela3">
-
-        <caption>População das Unidades Federativas</caption>
-        
-<thead>
-    <tr>
-        <th scope="col">Posição</th>
-        <th scope="col">Unidade</th>
-        <th scope="col">federativa</th>
-        <th scope="col">População (2010)</th>
-        <th scope="col">População (2021)</th>
-        <th scope="col">Mudança</th>
-        <th scope="col">% da pop. total</th>
-        <th scope="col">País comparável (habitantes)</th>
-    </tr>
-</thead>
-
-<tbody>
-    <tr>
-        <td>1</td>
-        <td>São Paulo</td>
-        <td class="numero">41 262 199</td>
-        <td class="numero">46 649 132</td>
-        <td class="numero">+13.05%</td>
-        <td class="numero">21,9%</td>
-        <td>Flag of Spain.svg Espanha</td>
-        <td class="numero">(46 439 864)</td>
-    </tr>
-    
-    <tr>
-        <td>2</td>
-        <td>Minas Gerais</td>
-        <td class="numero">19 597 330</td>
-        <td class="numero">21 411 923</td>
-        <td class="numero">+9.26%</td>
-        <td class="numero">10,1%</td>
-        <td>Sri Lanka </td>
-        <td class="numero">(20 675 000)</td>
-    </tr>
-    
-    <tr>
-        <td>3</td>
-        <td>Rio de Janeiro</td>
-        <td class="numero">15 989 929</td>
-        <td class="numero">17 463 349</td>
-        <td class="numero">+9.21%</td>
-        <td class="numero">8,2%</td>
-        <td>Síria Síria </td>
-        <td class="numero">(17 500 658)</td>
-    </tr>
-    
-    <tr>
-        <td>4</td>
-        <td>Bahia Bahia</td>
-        <td class="numero">14 016 906</td>
-        <td class="numero">14 985 284</td>
-        <td class="numero">+6.91%</td>
-        <td class="numero">7,1%</td>
-        <td>Chade</td>
-        <td class="numero">(14 037 000)</td>
-    </tr>
-    
-    <tr>
-        <td>5</td>
-        <td>Paraná</td>
-        <td class="numero">10 444 526</td>
-        <td class="numero">11 597 484</td>
-        <td class="numero">+11.04%
-        <td class="numero">5,4%</td>
-        <td>Bolívia</td>
-        <td class="numero">(11 410 651)</td>
-    </tr>
-    
-    <tr>
-        <td>6</td>
-        <td>Rio Grande do Sul</td>
-        <td class="numero">10 693 929</td>
-        <td class="numero">11 466 630</td>
-        <td class="numero">+7.23%</td>
-        <td class="numero">5,4%</td>
-        <td>Bélgica</td>
-        <td class="numero">(11 250 659)</td>
-    </tr>
-    
-    <tr>
-        <td>7</td>
-        <td>Pernambuco</td>
-        <td class="numero">8 796 448</td>
-        <td class="numero">9 674 793</td>
-        <td class="numero">+9.98%</td>
-        <td class="numero">4,5%</td>
-        <td>Bielorrússia</td>
-        <td class="numero">(9 485 300)</td>
-    </tr>
-    
-    <tr>
-        <td>8</td>
-        <td>Ceará</td>
-        <td class="numero">8 452 38</td>
-        <td class="numero">1 9 240 580</td>
-        <td class="numero">+9.32%</td>
-        <td class="numero">4,3%</td>
-        <td>Emirados Árabes Unidos</td>
-        <td class="numero">(9 157 000)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>9</td>
-        <td>Pará Pará</td>
-        <td class="numero">7 581 051</td>
-        <td class="numero">8 777 124</td>
-        <td class="numero">+15.78%</td>
-        <td class="numero">4,1%</td>
-        <td>Áustria</td>
-        <td class="numero">(8 602 112)</td>
-    </tr>
-    
-    <tr>
-        <td>10	</td>
-        <td>Santa Catarina</td>
-        <td class="numero">6 248 436</td>
-        <td class="numero">7 338 473</td>
-        <td class="numero">+17.44%</td>
-        <td class="numero">3,4%</td>
-        <td>Sérvia</td>
-        <td class="numero">(7 114 393)</td>
-    </tr>
-    
-    <tr>
-        <td>11</td>
-        <td>Goiás</td>
-        <td class="numero">6 003 788</td>
-        <td class="numero">7 206 589</td>
-        <td class="numero">+20.03%</td>
-        <td class="numero">3,4%</td>
-        <td>Paraguai</td>
-        <td class="numero">(7 003 406)</td>
-    </tr>
-    
-    <tr>
-        <td>12</td>
-        <td>Maranhão</td>
-        <td class="numero">6 574 789</td>
-        <td class="numero">7 153 262</td>
-        <td class="numero">+8.80%	</td>
-        <td class="numero">3,4%</td>
-        <td>Paraguai </td>
-        <td class="numero">(7 003 406)</td>
-    </tr>
-    
-    <tr>
-        <td>13	</td>
-        <td>Amazonas</td>
-        <td class="numero">3 483 985	</td>
-        <td class="numero">4 269 995</td>
-        <td class="numero">+22.56%</td>
-        <td class="numero">2,0%</td>
-        <td>Líbano </td>
-        <td class="numero">(4 168 000)</td>
-    </tr>
-    
-    <tr>
-        <td>14</td>
-        <td>Espírito Santo	</td>
-        <td class="numero">3 514 952</td>
-        <td class="numero">4 108 508</td>
-        <td class="numero">+16.89%</td>
-        <td class="numero">1,9%</td>
-        <td>Líbano</td>
-        <td class="numero">(4 168 000)</td>
-    </tr>
-    
-    <tr>
-        <td>15</td>
-        <td>Paraíba</td>
-        <td class="numero">3 766 528</td>
-        <td class="numero">4 059 905</td>
-        <td class="numero">+7.79%</td>
-        <td class="numero">1,9%</td>
-        <td>Líbano</td>
-        <td class="numero">(4 168 000)</td>
-    </tr>
-    
-    <tr>
-        <td>16</td>
-        <td>Mato Grosso</td>
-        <td class="numero">3 035 122</td>
-        <td class="numero">3 567 234</td>
-        <td class="numero">+17.53%</td>
-        <td class="numero">1,7%</td>
-        <td>Uruguai</td>
-        <td class="numero">(3 415 866)</td>
-    </tr>
-    
-    <tr>
-        <td>17</td>
-        <td>Rio Grande do Norte</td>
-        <td class="numero">3 168 027</td>
-        <td class="numero">3 560 903</td>
-        <td class="numero">+12.40%</td>
-        <td class="numero">1,7%</td>
-        <td>Uruguai</td>
-        <td class="numero">(3 415 866)</td>
-    </tr>
-    
-    <tr>
-        <td>18</td>
-        <td>Alagoas</td>
-        <td class="numero">3 120 494</td>
-        <td class="numero">3 365 351</td>
-        <td class="numero">+7.85%	</td>
-        <td class="numero">1,6%</td>
-        <td>Uruguai </td>
-        <td class="numero">(3 415 866)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>19</td>
-        <td>Piauí</td>
-        <td class="numero">3 118 360</td>
-        <td class="numero">3 289 290</td>
-        <td class="numero">+5.48%	</td>
-        <td class="numero">1,6%</td>
-        <td>Kuwait </td>
-        <td class="numero">(3 268 431)</td>
-    </tr>
-    
-    <tr>
-        <td>20</td>
-        <td>Distrito Federal</td>
-        <td class="numero">2 570 160	</td>
-        <td class="numero"> 094 325</td>
-        <td class="numero">+20.39%</td>
-        <td class="numero">1,4%</td>
-        <td>Lituânia</td>
-        <td class="numero">(2 900 787)</td>
-    </tr>
-    
-    <tr>
-        <td>21</td>
-        <td>Mato Grosso do Sul</td>
-        <td class="numero">2 449 024</td>
-        <td class="numero">2 839 188</td>
-        <td class="numero">+15.93%</td>
-        <td class="numero">1,3%</td>
-        <td>Jamaica</td>
-        <td class="numero">(2 717 991)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>22</td>
-        <td>Sergipe</td>
-        <td class="numero">2 068 017</td>
-        <td class="numero">2 338 474</td>
-        <td class="numero">+13.07%</td>
-        <td class="numero">1,1%</td>
-        <td>Namíbia </td>
-        <td class="numero">(2 280 700)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>23</td>
-        <td>Rondônia</td>
-        <td class="numero">1 562 409</td>
-        <td class="numero">1 815 278</td>
-        <td class="numero">+16.18%</td>
-        <td class="numero">0,8%</td>
-        <td>Gabão</td>
-        <td class="numero">(1 725 000)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>24</td>
-        <td>Tocantins</td>
-        <td class="numero">1 383 445</td>
-        <td class="numero">1 607 363</td>
-        <td class="numero">+16.18%</td>
-        <td class="numero">0,7%</td>
-        <td>Bahrein</td>
-        <td class="numero">(1 359 800)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>25</td>
-        <td>Acre</td>
-        <td class="numero">733 559</td>
-        <td class="numero">906 876</td>
-        <td class="numero">+23.63%</td>
-        <td class="numero">0,4%</td>
-        <td>Fiji </td>
-        <td class="numero">(859 178)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>26</td>
-        <td>Amapá</td>
-        <td class="numero">669 526
-        <td class="numero">877 613</td>
-        <td class="numero">+31.08%</td>
-        <td class="numero">0,4%</td>
-        <td>Fiji</td>
-        <td class="numero">(859 178)</td>
-    </tr>
-    
-    <tr>
-    
-        <td>27</td>
-        <td>Roraima</td>
-        <td class="numero">450 479</td>
-        <td class="numero">652 713</td>
-        <td class="numero">+44.89%</td>
-        <td class="numero">0,3%</td>
-        <td>Luxemburgo</td>
-        <td class="numero">(562 958)</td>
-    </tr>
-</tbody>
-<tfoot><tr>
-    <th scope="row" colspan="8">Tabela retirada do <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o">wikipedia</a></th>
+    <div id="container">
+        <table id="tabela3">
+            <caption>População das Unidades Federativas</caption>
+            
+        <thead>
+        <tr>
+            <th scope="col">Posição</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">federativa</th>
+            <th scope="col">População (2010)</th>
+            <th scope="col">População (2021)</th>
+            <th scope="col">Mudança</th>
+            <th scope="col">% da pop. total</th>
+            <th scope="col">País comparável (habitantes)</th>
         </tr>
-</tfoot>
-    </table>
+        </thead>
+        
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>São Paulo</td>
+            <td class="numero">41 262 199</td>
+            <td class="numero">46 649 132</td>
+            <td class="numero">+13.05%</td>
+            <td class="numero">21,9%</td>
+            <td>Flag of Spain.svg Espanha</td>
+            <td class="numero">(46 439 864)</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>Minas Gerais</td>
+            <td class="numero">19 597 330</td>
+            <td class="numero">21 411 923</td>
+            <td class="numero">+9.26%</td>
+            <td class="numero">10,1%</td>
+            <td>Sri Lanka </td>
+            <td class="numero">(20 675 000)</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>Rio de Janeiro</td>
+            <td class="numero">15 989 929</td>
+            <td class="numero">17 463 349</td>
+            <td class="numero">+9.21%</td>
+            <td class="numero">8,2%</td>
+            <td>Síria Síria </td>
+            <td class="numero">(17 500 658)</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>Bahia Bahia</td>
+            <td class="numero">14 016 906</td>
+            <td class="numero">14 985 284</td>
+            <td class="numero">+6.91%</td>
+            <td class="numero">7,1%</td>
+            <td>Chade</td>
+            <td class="numero">(14 037 000)</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>Paraná</td>
+            <td class="numero">10 444 526</td>
+            <td class="numero">11 597 484</td>
+            <td class="numero">+11.04%
+            <td class="numero">5,4%</td>
+            <td>Bolívia</td>
+            <td class="numero">(11 410 651)</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>Rio Grande do Sul</td>
+            <td class="numero">10 693 929</td>
+            <td class="numero">11 466 630</td>
+            <td class="numero">+7.23%</td>
+            <td class="numero">5,4%</td>
+            <td>Bélgica</td>
+            <td class="numero">(11 250 659)</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>Pernambuco</td>
+            <td class="numero">8 796 448</td>
+            <td class="numero">9 674 793</td>
+            <td class="numero">+9.98%</td>
+            <td class="numero">4,5%</td>
+            <td>Bielorrússia</td>
+            <td class="numero">(9 485 300)</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>Ceará</td>
+            <td class="numero">8 452 38</td>
+            <td class="numero">1 9 240 580</td>
+            <td class="numero">+9.32%</td>
+            <td class="numero">4,3%</td>
+            <td>Emirados Árabes Unidos</td>
+            <td class="numero">(9 157 000)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>9</td>
+            <td>Pará Pará</td>
+            <td class="numero">7 581 051</td>
+            <td class="numero">8 777 124</td>
+            <td class="numero">+15.78%</td>
+            <td class="numero">4,1%</td>
+            <td>Áustria</td>
+            <td class="numero">(8 602 112)</td>
+        </tr>
+        
+        <tr>
+            <td>10	</td>
+            <td>Santa Catarina</td>
+            <td class="numero">6 248 436</td>
+            <td class="numero">7 338 473</td>
+            <td class="numero">+17.44%</td>
+            <td class="numero">3,4%</td>
+            <td>Sérvia</td>
+            <td class="numero">(7 114 393)</td>
+        </tr>
+        
+        <tr>
+            <td>11</td>
+            <td>Goiás</td>
+            <td class="numero">6 003 788</td>
+            <td class="numero">7 206 589</td>
+            <td class="numero">+20.03%</td>
+            <td class="numero">3,4%</td>
+            <td>Paraguai</td>
+            <td class="numero">(7 003 406)</td>
+        </tr>
+        
+        <tr>
+            <td>12</td>
+            <td>Maranhão</td>
+            <td class="numero">6 574 789</td>
+            <td class="numero">7 153 262</td>
+            <td class="numero">+8.80%	</td>
+            <td class="numero">3,4%</td>
+            <td>Paraguai </td>
+            <td class="numero">(7 003 406)</td>
+        </tr>
+        
+        <tr>
+            <td>13	</td>
+            <td>Amazonas</td>
+            <td class="numero">3 483 985	</td>
+            <td class="numero">4 269 995</td>
+            <td class="numero">+22.56%</td>
+            <td class="numero">2,0%</td>
+            <td>Líbano </td>
+            <td class="numero">(4 168 000)</td>
+        </tr>
+        
+        <tr>
+            <td>14</td>
+            <td>Espírito Santo	</td>
+            <td class="numero">3 514 952</td>
+            <td class="numero">4 108 508</td>
+            <td class="numero">+16.89%</td>
+            <td class="numero">1,9%</td>
+            <td>Líbano</td>
+            <td class="numero">(4 168 000)</td>
+        </tr>
+        
+        <tr>
+            <td>15</td>
+            <td>Paraíba</td>
+            <td class="numero">3 766 528</td>
+            <td class="numero">4 059 905</td>
+            <td class="numero">+7.79%</td>
+            <td class="numero">1,9%</td>
+            <td>Líbano</td>
+            <td class="numero">(4 168 000)</td>
+        </tr>
+        
+        <tr>
+            <td>16</td>
+            <td>Mato Grosso</td>
+            <td class="numero">3 035 122</td>
+            <td class="numero">3 567 234</td>
+            <td class="numero">+17.53%</td>
+            <td class="numero">1,7%</td>
+            <td>Uruguai</td>
+            <td class="numero">(3 415 866)</td>
+        </tr>
+        
+        <tr>
+            <td>17</td>
+            <td>Rio Grande do Norte</td>
+            <td class="numero">3 168 027</td>
+            <td class="numero">3 560 903</td>
+            <td class="numero">+12.40%</td>
+            <td class="numero">1,7%</td>
+            <td>Uruguai</td>
+            <td class="numero">(3 415 866)</td>
+        </tr>
+        
+        <tr>
+            <td>18</td>
+            <td>Alagoas</td>
+            <td class="numero">3 120 494</td>
+            <td class="numero">3 365 351</td>
+            <td class="numero">+7.85%	</td>
+            <td class="numero">1,6%</td>
+            <td>Uruguai </td>
+            <td class="numero">(3 415 866)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>19</td>
+            <td>Piauí</td>
+            <td class="numero">3 118 360</td>
+            <td class="numero">3 289 290</td>
+            <td class="numero">+5.48%	</td>
+            <td class="numero">1,6%</td>
+            <td>Kuwait </td>
+            <td class="numero">(3 268 431)</td>
+        </tr>
+        
+        <tr>
+            <td>20</td>
+            <td>Distrito Federal</td>
+            <td class="numero">2 570 160	</td>
+            <td class="numero"> 094 325</td>
+            <td class="numero">+20.39%</td>
+            <td class="numero">1,4%</td>
+            <td>Lituânia</td>
+            <td class="numero">(2 900 787)</td>
+        </tr>
+        
+        <tr>
+            <td>21</td>
+            <td>Mato Grosso do Sul</td>
+            <td class="numero">2 449 024</td>
+            <td class="numero">2 839 188</td>
+            <td class="numero">+15.93%</td>
+            <td class="numero">1,3%</td>
+            <td>Jamaica</td>
+            <td class="numero">(2 717 991)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>22</td>
+            <td>Sergipe</td>
+            <td class="numero">2 068 017</td>
+            <td class="numero">2 338 474</td>
+            <td class="numero">+13.07%</td>
+            <td class="numero">1,1%</td>
+            <td>Namíbia </td>
+            <td class="numero">(2 280 700)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>23</td>
+            <td>Rondônia</td>
+            <td class="numero">1 562 409</td>
+            <td class="numero">1 815 278</td>
+            <td class="numero">+16.18%</td>
+            <td class="numero">0,8%</td>
+            <td>Gabão</td>
+            <td class="numero">(1 725 000)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>24</td>
+            <td>Tocantins</td>
+            <td class="numero">1 383 445</td>
+            <td class="numero">1 607 363</td>
+            <td class="numero">+16.18%</td>
+            <td class="numero">0,7%</td>
+            <td>Bahrein</td>
+            <td class="numero">(1 359 800)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>25</td>
+            <td>Acre</td>
+            <td class="numero">733 559</td>
+            <td class="numero">906 876</td>
+            <td class="numero">+23.63%</td>
+            <td class="numero">0,4%</td>
+            <td>Fiji </td>
+            <td class="numero">(859 178)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>26</td>
+            <td>Amapá</td>
+            <td class="numero">669 526
+            <td class="numero">877 613</td>
+            <td class="numero">+31.08%</td>
+            <td class="numero">0,4%</td>
+            <td>Fiji</td>
+            <td class="numero">(859 178)</td>
+        </tr>
+        
+        <tr>
+        
+            <td>27</td>
+            <td>Roraima</td>
+            <td class="numero">450 479</td>
+            <td class="numero">652 713</td>
+            <td class="numero">+44.89%</td>
+            <td class="numero">0,3%</td>
+            <td>Luxemburgo</td>
+            <td class="numero">(562 958)</td>
+        </tr>
+        </tbody>
+        <tfoot><tr>
+        <th scope="row" colspan="8">Tabela retirada do <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o">wikipedia</a></th>
+            </tr>
+        </tfoot>
+        </table>
+    </div>
 
     <br>
 
@@ -575,16 +602,18 @@
     <br>
 
     <table id="filme">
+        <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
-                <th>Grupo</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
             </tr>
+        </thead>
 
             <tbody>
                 <tr>
-                    <th rowspan="3">Mulheres</th>
+                    <th rowspan="3" scope="rowgroup">Mulheres</th>
                     <td>Ana Maria Santos</td>
                     <td>Alien</td>
                     <td>Rambo</td>
@@ -606,7 +635,7 @@
                 </tr>
 
                 <tr>
-                    <th rowspan="3">Homens</th>
+                    <th rowspan="3" scope="rowgroup">Homens</th>
                     <td>Bruno Mendonça</td>
                     <td>Intocáveis</td>
                     <td>Aminésia</td>
@@ -627,7 +656,14 @@
                     <td>Toy story</td>
                 </tr>
             </tbody>
-        </thead>
+
+            <tfoot>
+                <tr>
+                    <th colspan="4" scope="row">Total de Filmes</th>
+                    <td>6</td>
+                </tr>
+            </tfoot>
+       
     </table>
 </body>
 </html>
