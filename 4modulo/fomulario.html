@@ -10,26 +10,134 @@
 
     <h1>Meu primeiro formulario</h1>
 
-    <form action="#" method="post" autocomplete="on">
+    <form action="#" method="post">
 
-        <p><label for="inome">nome:</label>
-            <input type="text"  name="" id="inome" required minlength="5" maxlength="15" size="10" placeholder="nome" autocomplete="username"></p>
-        <p><label for="ie-mail">e-mail:</label>
-            <input type="email" name="" id="ie-mail" required placeholder="e-mail" autocomplete="email"></p>
-            <p>Tel.: <input type="tel" name="" id="tel"></p>
-        <p><label for="isenha">Senha:</label>
-            <input type="password" name="" id="isenha" required minlength="5" placeholder="senha" autocomplete="current-password"></p>
+        <fieldset>
+
+            <legend>Dados cadastrais</legend>
+            <p>
+                <label for="inome">nome:</label>
+                <input type="text"  name="" id="inome" required minlength="5" maxlength="15" size="10" placeholder="nome" autocomplete="username">
+            </p>
+            <p>
+                <label for="ie-mail">e-mail:</label>
+                <input type="email" name="" id="ie-mail" required placeholder="e-mail" autocomplete="email">
+            </p>
+                <p>
+                    <label for="tel">Tel.: <input type="tel" name="" id="tel"  autocomplete="tel"></label>
+            </p>
+        
+
+        <p>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="" id="isenha" required minlength="5" placeholder="senha" autocomplete="current-password">
+        </p>
+    </fieldset>
 
 
-            <p>media: <input type="number" name="" id="" step="0.5"></p>
-            <p>data: <input type="date" name="" id="idata"> </p>
-            <p>horario <input type="time" name="" id=""></p>
+            <label for="imedi">
+                <p>media: <input type="number" name="" id="imedi" step="0.5" size="10"></p>
+            </label>
+
+            <p><label for="idata">data: <input type="date" name="" id="idata"></label> </p>
+            <p><label for="ihora">horario <input type="time" name="" id="ihora"></label></p>
+
+<fieldset>
+
+    <legend>sexo</legend>
+    
+                <label for="imasc" for="ifem">
+                   <p>masculino <input type="radio" name="sexo" id="imasc" value="masculino"></p> <p>Feminino <input type="radio" name="sexo" id="ifem" checked value="feminino"></p>
+                </label>
+</fieldset>
+
+
+<fieldset>
+    <legend>esportes</legend>
+    <p>volei<input type="checkbox" name="" id=""></p> 
+    <p>futebol<input type="checkbox" name="" id=""></p> 
+    <p>natação<input type="checkbox" name="" id=""></p> 
+    <p>capoeira<input type="checkbox" name="" id=""></p> 
+    <p>xadrez<input type="checkbox" name="" id=""></p> 
+</fieldset>
+
+<fieldset>
+    <legend>Outros</legend>
+    <p>cor <input type="color" name="" id=""></p>
+    <p>Nivel: 1<input type="range" name="" id="" min="1" max="10">10</p>
+    <p><input type="file" name="" id=""></p>
+</fieldset>
+
+<fieldset>
+    <legend>cidades/profissao</legend>
+    <select name="" id="">
+       <optgroup label="regiao sudeste">
+        <option value="sp">sao paulo</option>
+        <option value="rj">rio de janeiroo</option>
+        <option value="mg">minas gerais</option>
+        </optgroup>
+
+        <optgroup label="regiao nordeste">
+            <option value="pe" selected>pesqueira</option>
+            <option value="pe">recife</option>
+        </optgroup>
+    </select>
+<br>
+        <p>profissao <input type="text" list="profisao">
+
+        <datalist id="profisao">
+            <option value="med">medico</option>
+            <option value="aso">asogueiro</option>
+            <option value="pro">programador</option>
+        </datalist>
+       </p>
+   
+</fieldset>
+
+<fieldset>
+    <legend>opiniao</legend>
+    <textarea name="" id="" cols="30" rows="10" placeholder="digite..."></textarea>
+</fieldset>
 
         <input type="submit" value="enviar">
         <input type="reset" value="limpar">
         
+        
    
     </form>
+
+    <form action="#" method="post">
+        <p>numero1 <input type="number" name="n1" id="n1" oninput="isoma.innerHTML =Number(n1.value) + Number(n2.value)"> </p>
+        <p>numero2 <input type="number" name="n2" id="n2" oninput="isoma.innerHTML=Number(n1.value) + Number(n2.value)"></p>
+
+        <output name="soma" id="isoma">0</output>
+
+
+
+        <fieldset>
+            <legend>de 0 a 10</legend>
+            <input type="range" name="num" id="inum" min="0" max="10"  oninput="ival.innerHTML=Number(inum.value)">
+            <output id="ival">5</output>
+        </fieldset>
+
+        <fieldset>
+            <legend>idade</legend>
+            <input type="number" name="" id="iano" oninput="calculo()">
+
+            <output id="idade"></output>
+        </fieldset>
+
+        
+    </form>
+
+    <script>
+        function calculo(){
+            var atual = new Date().getFullYear()
+            idade.innerHTML = Number(atual) - Number(iano.value)
+
+
+        }
+    </script>
     
 </body>
 </html>
